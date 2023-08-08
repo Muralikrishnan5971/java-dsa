@@ -4,10 +4,10 @@ import java.util.Arrays;
 public class TwoDArray {
     public static void main(String[] args) {
         // declare
-        int[][] arr;
+        int[][] arr;                // O(1)
         // instantiate
-        arr = new int[2][2];
-        // initialize
+        arr = new int[2][2];        // O(1)
+        // initialize               this will take a time complexity of O(mn)
         arr[0][0] = 1;
         arr[0][1] = 2;
         arr[1][0] = 3;
@@ -21,7 +21,10 @@ public class TwoDArray {
         System.out.println(Arrays.deepToString(arr));
 
         // clubbing all the above steps to single steps 
-        String str[][] = {{"apple", "pear"}, {"grape", "orange"}};
+        String str[][] = {{"apple", "pear"}, {"grape", "orange"}};      // O(n)
+        System.out.println(Arrays.deepToString(str));
+
+        // two d arrays take space complexity of O(mn)
        
     }
 }

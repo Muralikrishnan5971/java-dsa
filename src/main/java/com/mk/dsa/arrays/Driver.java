@@ -1,5 +1,7 @@
 package com.mk.dsa.arrays;
 
+import java.util.Arrays;
+
 public class Driver {
     public static void main(String[] args) {
 
@@ -20,6 +22,20 @@ public class Driver {
         sda.searchArray(20);
         sda.deleteByIndex(2);
         System.out.println(sda.arr[2]);
+
+        System.out.println("*************************************************");
+
+        TwoDimensionArray tda = new TwoDimensionArray(3, 3);
+        tda.insertValueInArray(0, 0, 10);
+        tda.insertValueInArray(0, 1, 20);
+        tda.insertValueInArray(0, 2, 30);
+        System.out.println(Arrays.deepToString(tda.arr));
+
+        tda.getValueInArray(0, 2);
+
+        tda.traverse2DArray();
+
+        tda.searchGivenValue(30);
 
     }
 }
