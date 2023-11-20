@@ -1,0 +1,14 @@
+Binary Search Algorithm - As part of Divide and conquers
+
+Binary Search is defined as a searching algorithm used in a sorted array by repeatedly dividing the search interval in half.
+
+Conditions to apply binary search:
+--> The data structure should be sorted.
+--> Should be able to access data at constant time
+
+Binary Search can be implemented in two ways:
+
+--> Iterative Binary search algorithm
+--> Recursive Binary search algorithm
+
+Has a time complexity of O(log N), where N is the number of elements in the array.

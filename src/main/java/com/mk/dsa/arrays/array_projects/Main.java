@@ -4,12 +4,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        
+
         // calcAverageTemperatureWithoutArray();
-        calcAverageTemperatureWithArray();
+        // calcAverageTemperatureWithArray();
+
+        int[] test = {};
+        System.out.println(test.getClass());
+        System.out.println(test.length);
+
     }
 
-    public static void calcAverageTemperatureWithArray(){
+    public static void calcAverageTemperatureWithArray() {
 
         Scanner console = new Scanner(System.in);
         System.out.print("How many day's temperature ? ");
@@ -20,8 +25,8 @@ public class Main {
 
         // store the user input (temperature values) to the array
         for (int i = 0; i < temps.length; i++) {
-            System.out.print("Please enter Day "+ (i + 1) + " temperature: ");
-            temps[i]= console.nextInt();
+            System.out.print("Please enter Day " + (i + 1) + " temperature: ");
+            temps[i] = console.nextInt();
 
             // calculation total sum of temperature
             sumOfTemperature += temps[i];
@@ -32,7 +37,7 @@ public class Main {
         // count days above average
         int count = 0;
         for (int i = 0; i < temps.length; i++) {
-            if(temps[i] > averageTemperature){
+            if (temps[i] > averageTemperature) {
                 count++;
             }
         }
@@ -42,7 +47,7 @@ public class Main {
         console.close();
     }
 
-    public static void calcAverageTemperatureWithoutArray(){
+    public static void calcAverageTemperatureWithoutArray() {
 
         Scanner console = new Scanner(System.in);
         System.out.print("How many day's temperature ? ");
@@ -50,7 +55,7 @@ public class Main {
         int sumOfTemperature = 0;
 
         for (int i = 1; i <= numberOfDays; i++) {
-            System.out.print("Please enter Day "+ i + " temperature: ");
+            System.out.print("Please enter Day " + i + " temperature: ");
             sumOfTemperature += console.nextInt();
         }
 
@@ -63,18 +68,22 @@ public class Main {
         /*
          * Everything works here smoothly, And we have not used array data structure.
          * But the question over here is, how do you count how many days were above
-         * average temperature ? 
+         * average temperature ?
          * 
          * We could try to incorporate it inside this loop over here, but it won't work.
-         * The problem is you cannot figure out the average untill you have gone through 
-         * all of the date. This means that we need to go through data again to figure out 
+         * The problem is you cannot figure out the average untill you have gone through
+         * all of the date. This means that we need to go through data again to figure
+         * out
          * how many days were of average temperature. And one more time throughthe loop
-         * to find out which temperature is above the average temperature. Since we are using 
+         * to find out which temperature is above the average temperature. Since we are
+         * using
          * Scanner class, which doest have any option to see the data second time.
          * 
-         * We might need to prompt the user a second time for the data, but its not good practise.
+         * We might need to prompt the user a second time for the data, but its not good
+         * practise.
          * 
-         * here only Data structtures comes into the picture. The above problem can be solved
+         * here only Data structtures comes into the picture. The above problem can be
+         * solved
          * using Arrays!
          * 
          * 
